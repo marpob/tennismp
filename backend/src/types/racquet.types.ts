@@ -1,0 +1,61 @@
+export interface Racquet {
+  id: number;
+  slug: string;
+  name: string;
+  brand: string;
+  model: string;
+  year?: number;
+  weight_g?: number;
+  head_size_sq_in?: number;
+  length_in?: number;
+  balance_mm?: number;
+  balance_type?: "head_heavy" | "head_light" | "even";
+  swingweight?: number;
+  stiffness_ra?: number;
+  beam_width_mm?: string;
+  string_pattern?: string;
+  power_level?: number;
+  spin_level?: number;
+  control_level?: number;
+  maneuverability?: number;
+  recommended_swing_speed?: "slow" | "medium" | "fast";
+  skill_level?: "beginner" | "intermediate" | "advanced" | "all";
+  player_type?: string[];
+  review_summary?: string;
+  review_body?: string;
+  pros?: string[];
+  cons?: string[];
+  score_overall?: number;
+  score_power?: number;
+  score_control?: number;
+  score_spin?: number;
+  score_comfort?: number;
+  score_maneuverability?: number;
+  image_url?: string;
+  affiliate_url?: string;
+  colors?: string[];
+  is_published: boolean;
+  published_at?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface RacquetFilters {
+  brand?: string;
+  weight_min?: number;
+  weight_max?: number;
+  head_size_min?: number;
+  head_size_max?: number;
+  balance_type?: string;
+  swingweight_min?: number;
+  swingweight_max?: number;
+  stiffness_min?: number;
+  stiffness_max?: number;
+  power_level_min?: number;
+  swing_speed?: string;
+  color?: string;
+  string_pattern?: string;
+  sort?: "score" | "name" | "weight";
+  page?: number;
+  limit?: number;
+}
